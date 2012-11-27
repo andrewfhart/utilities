@@ -1,4 +1,4 @@
-#--------------------------------------------------------
+# -------------------------------------------------------
 # Anti-carpal-tunnel aliases and utilities for Bash
 # -------------------------------------------------------
 
@@ -26,3 +26,25 @@ up() {
 
     cd $d
 }
+
+# Make a directory using the given name, then cd into it
+mkcd() {
+    if [ $# != 1 ]; then
+	echo "Calling convention: mkcd <dir>"
+    else
+	mkdir -p $1 && cd $1
+    fi
+}
+
+# ---------------------------------------------------------
+# Aliases for common commands
+# ---------------------------------------------------------
+alias df="df -h"         # Human readable disk space remaining
+alias size="du -shc"     # Summarize disk usage for given path
+
+alias ll="ls -alh"       # Full, human readable list
+alias la="ls -lap"       # Alphabetized by name
+alias sl="ls"            # Common typo
+alias l="ls"             # Common typo
+alias s="ls"             # Common typo
+
