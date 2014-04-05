@@ -48,3 +48,6 @@ alias sl="ls"            # Common typo
 alias l="ls"             # Common typo
 alias s="ls"             # Common typo
 
+alias sudo="sudo "       # Make sudo work with aliased commands
+alias e="emacs -nw"      # Open up emacs in non-windowed mode
+
